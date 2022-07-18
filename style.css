@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.container {
+    border: solid 4px black;
+    width: 420px;
+    height: 480px;
+    background-color: gray;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+}
+
+#display {
+    border: 2px solid rgb(0, 0, 0);
+    width: 350px;
+    height: 80px;
+    background-color: rgb(206, 248, 121);
+    display: flex;
+}
+
+.buttonContainer {
+    width: 400px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+.number{
+    border: solid 2px black;
+    width: 70px;
+    height: 50px;
+    margin: 10px;
+    margin-top:20px;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clear {
+    min-width: 164px;
+}
+
+#add,
+#minus,
+#divide,
+#times,
+#equals,
+#clear
+{
+    border: solid 2px black;
+    width: 70px;
+    height: 50px;
+    margin: 10px;
+    margin-top:20px;
+    background-color:rgb(230, 172, 124);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clear {
+    background-color: rgb(101, 101, 180);
+}
+
+#equals {
+    background-color: rgb(89, 235, 69);
+}
