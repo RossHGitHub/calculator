@@ -20,7 +20,12 @@ body {
 
 }
 
-#display {
+button > button:hover {
+    background-color: rgb(226, 202, 202);
+
+}
+
+.output {
     border: 2px solid rgb(0, 0, 0);
     width: 350px;
     height: 80px;
@@ -28,6 +33,11 @@ body {
     display: flex;
     box-shadow: 2px 2px black;
     border-radius: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
+    font-size: 40px;
 }
 
 .buttonContainer {
@@ -57,10 +67,6 @@ body {
 }
 
 
-#clear {
-    min-width: 164px;
-}
-
 #add,
 #minus,
 #divide,
@@ -83,6 +89,7 @@ body {
 
 #clear {
     background-color: rgb(101, 101, 180);
+    min-width: 164px;
 }
 
 #equals {
