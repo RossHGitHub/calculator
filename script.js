@@ -23,8 +23,8 @@ class Calculator {
     }
 
 
-    updateDisplay() {
-        this.output.innerText = this.output
+    updateDisplay(text) {
+        this.output.innerText = text
     }
 }
 
@@ -35,12 +35,12 @@ const clearButton = document.querySelector('[data-number]');
 
 const output = document.querySelector('[data-output]');
 
-const calculator = new Calculator(output);
+const calculator = new Calculator(output)
 
 numberButtons.forEach(button => {
     button.addEventListener('click', ()=> {
         calculator.appendNumber(button.innerText)
-        calculator.updateDisplay()
-    })
+        calculator.updateDisplay(button.innerText);
 })
 
+})
