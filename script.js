@@ -19,10 +19,10 @@ class Calculator {
 
 
     chooseOperation(operation) {
-    if (operation === ''){
+    if (this.currentOperand === ''){
     return}
 
-    if (previousOperand !== '') {
+    if (this.previousOperand !== '') {
         this.compute()
     }
 
@@ -38,10 +38,31 @@ class Calculator {
         let computation
         const previous = parseFloat(this.previousOperand)
         const current = parseFloat(this.currentOperand)
-        if (isNaN(prev) || isNaN(current)) {return}
+        if (isNaN(previous) || isNaN(current)) return
 
-        switch
+        switch(this.operation) {
+            case '+': 
+                computation = previous + current
+                break
 
+            case '-':
+                computation = previous - current
+                break
+
+            case '*':
+                computation = previous * current
+                break
+
+            case '/':
+                computation = previous / current
+                break
+
+                default:
+                    return
+        }
+this.currentOperand = computation
+this.operation = undefined
+this.previousOperand = '';
         
     }
 
