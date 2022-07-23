@@ -27,13 +27,19 @@ class Calculator {
     }
 
     this.operation = operation
-    this.previousOperand = this.currentOperand
+    this.previousOperand = this.currentOperand.toString() + operation.toString()
     this.currentOperand = '';
 
 
     }
 
     compute() {
+
+        if(this.currentOperand==='0') {
+            this.currentOperand='haha, dick';
+            this.previousOperand='';
+            this.updateDisplay();
+        }
         
         let computation
         const previous = parseFloat(this.previousOperand)
@@ -41,7 +47,8 @@ class Calculator {
         if (isNaN(previous) || isNaN(current)) return
 
         switch(this.operation) {
-            case '+': 
+
+                     case '+': 
                 computation = previous + current
                 break
 
@@ -49,7 +56,7 @@ class Calculator {
                 computation = previous - current
                 break
 
-            case '*':
+            case 'x':
                 computation = previous * current
                 break
 
@@ -59,8 +66,11 @@ class Calculator {
 
                 default:
                     return
+
+
+     
         }
-this.currentOperand = computation
+this.currentOperand = computation.toFixed(3);
 this.operation = undefined
 this.previousOperand = '';
         

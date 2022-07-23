@@ -8,40 +8,48 @@ body {
 .container {
     border: solid 4px black;
     width: 420px;
-    height: 480px;
+    min-height: 540px;
     background-color: rgb(58, 58, 58);
     border-radius: 10px;
-
+    justify-content: end;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+
     align-items: center;
     box-shadow: 8px 8px rgb(204, 203, 203);
 
 }
 
-button > button:hover {
-    background-color: rgb(226, 202, 202);
-
-}
 
 .output {
     border: 2px solid rgb(0, 0, 0);
-    width: 350px;
-    height: 80px;
+    max-width: 350px;
+    min-width: 350px;
+    min-height: 80px;
     background-color: rgb(206, 248, 121);
     box-shadow: 2px 2px black;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items:flex-end;
     padding-right: 10px;
     font-size: 40px;
     flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.current-number {
+    display: flex;
+    max-width: 350px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .prev-num {
     font-size: 20px;
+    min-height: 30px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .buttonContainer {
@@ -51,10 +59,10 @@ button > button:hover {
     flex-wrap: wrap;
     align-items: end;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 
 }
-#one, #two, #three, #four, #five, #six, #seven, #eight, #nine
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero
 {
     border: solid 2px black;
     width: 70px;
@@ -68,6 +76,10 @@ button > button:hover {
     border-radius: 10px;
     box-shadow: 2px 2px black;
 
+}
+
+#zero {
+    flex-grow: 1;
 }
 
 
